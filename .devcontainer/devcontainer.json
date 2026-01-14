@@ -1,0 +1,18 @@
+{
+  "name": "Novel Writing Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "shinnn.textlint",
+        "davidanson.vscode-markdownlint",
+        "ms-ceintl.vscode-language-pack-ja"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y pandoc && sudo npm install -g textlint textlint-rule-preset-ja-technical-writing textlint-rule-preset-japanese"
+}
